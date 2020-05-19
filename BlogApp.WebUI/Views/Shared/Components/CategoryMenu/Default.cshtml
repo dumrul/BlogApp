@@ -1,0 +1,14 @@
+﻿
+@model IEnumerable<Category>
+
+<div class="list-group">
+
+    @foreach (var item in Model)
+    {
+        <a href="#" class="list-group-item">
+            @item.Name
+        </a>
+    }
+
+
+</div>

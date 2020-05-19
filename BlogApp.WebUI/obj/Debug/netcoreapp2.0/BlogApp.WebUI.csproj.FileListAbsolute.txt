@@ -1,0 +1,16 @@
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.WebUI.deps.json
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.WebUI.runtimeconfig.json
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.WebUI.runtimeconfig.dev.json
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.WebUI.dll
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.WebUI.pdb
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.Data.dll
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.Entity.dll
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.Data.pdb
+C:\sadikturan\BlogApp\BlogApp.WebUI\bin\Debug\netcoreapp2.0\BlogApp.Entity.pdb
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.csprojAssemblyReference.cache
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.csproj.CoreCompileInputs.cache
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.AssemblyInfoInputs.cache
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.AssemblyInfo.cs
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.csproj.CopyComplete
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.dll
+C:\sadikturan\BlogApp\BlogApp.WebUI\obj\Debug\netcoreapp2.0\BlogApp.WebUI.pdb

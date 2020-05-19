@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/48481003/how-to-use-bootstrap-4-in-asp-net-core
+PM> Install-Package BuildBundlerMinifier -Version 3.2.447
