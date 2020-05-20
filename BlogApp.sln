@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.1082
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.WebUI", "BlogApp.WebUI\BlogApp.WebUI.csproj", "{DD89771D-9B5D-43BE-B254-EBDE085CFC0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogApp.WebUI", "BlogApp.WebUI\BlogApp.WebUI.csproj", "{DD89771D-9B5D-43BE-B254-EBDE085CFC0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.Entity", "BlogApp.Entity\BlogApp.Entity.csproj", "{4B3AE510-3EC8-473E-808A-52FBFCA05B47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogApp.Entity", "BlogApp.Entity\BlogApp.Entity.csproj", "{4B3AE510-3EC8-473E-808A-52FBFCA05B47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogApp.Data", "BlogApp.Data\BlogApp.Data.csproj", "{F009D334-2D4E-4F16-ACA1-C5A613B83761}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlogApp.Data", "BlogApp.Data\BlogApp.Data.csproj", "{F009D334-2D4E-4F16-ACA1-C5A613B83761}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
