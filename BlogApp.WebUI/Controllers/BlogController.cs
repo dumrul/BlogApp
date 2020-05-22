@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using BlogApp.Data.Repository.Abstract;
 using BlogApp.Entity;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -52,27 +54,52 @@ namespace BlogApp.WebUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddOrUpdate(int? id)
+        public IActionResult Create()
         {
             ViewBag.Categories = new SelectList(_categoryRepository.GetAll(), "CategoryId", "Name");
 
-            if (id == null)
-            {
-                //yeni bir kayıt
-                return View(new Blog());
-            }
-            else
-            {
-                //güncelleme
-                return View(_blogRepository.GetById((int)id));
-            }
+            return View(new Blog());
         }
 
         [HttpPost]
-        public IActionResult AddOrUpdate(Blog entity)
+        public IActionResult Create(Blog entity)
         {
             if (ModelState.IsValid)
             {
+                _blogRepository.SaveBlog(entity);
+                TempData["message"] = $"{entity.Title} kayıt edildi.";
+                return RedirectToAction("List");
+            }
+
+            ViewBag.Categories = new SelectList(_categoryRepository.GetAll(), "CategoryId", "Name");
+            return View(entity);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Categories = new SelectList(_categoryRepository.GetAll(), "CategoryId", "Name");
+
+            return View(_blogRepository.GetById(id));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Blog entity, IFormFile file)
+        {
+            if (ModelState.IsValid)
+            {
+                if (file != null)
+                {
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img", file.FileName);
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await file.CopyToAsync(stream);
+
+                        entity.Image = file.FileName;
+                    }
+                }
+
                 _blogRepository.SaveBlog(entity);
                 TempData["message"] = $"{entity.Title} kayıt edildi.";
                 return RedirectToAction("List");

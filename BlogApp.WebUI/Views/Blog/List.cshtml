@@ -6,13 +6,14 @@
 }
 <div class="container mt-3">
     <h2>Blog list</h2>
-    <br />
 
-    <div class="container mb-2">
-        <a class="btn btn-primary btn-sm" asp-controller="Blog" asp-action="AddOrUpdate" asp-route-id=null>
-            New Blog
-        </a>
+    <hr />
+    <div>
+        <a class="btn btn-primary" asp-controller="Blog" asp-action="Create" asp-route-id=null>Create</a>
     </div>
+    <hr />
+
+
 
     <div class="row">
         <div class="col">
@@ -27,48 +28,59 @@
                             <th>Date</th>
                             <th>is Approved</th>
                             <th>is Home</th>
+                            <th>is Slider</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var item in Model)
                         {
-                        <tr>
-                            <td>@item.BlogId</td>
-                            <td>
-                                <img src="~/img/@item.Image" width="100" />
-                            </td>
-                            <td>@item.Title</td>
-                            <td>@item.Date</td>
-                            <td>
-                                @if (item.isApproved)
-                                {
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                }
-                                else
-                                {
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                }
-                            </td>
-                            <td>
-                                @if (item.isHome)
-                                {
-                                    <i class="fa fa-check" aria-hidden="true"></i>
-                                }
-                                else
-                                {
-                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                }
-                            </td>
-                            <td>
-                                <a class="btn btn-primary btn-sm" asp-controller="Blog" asp-action="AddOrUpdate" asp-route-id="@item.BlogId">
-                                    Details
-                                </a>
-                                <a class="btn btn-danger btn-sm" asp-controller="Blog" asp-action="Delete" asp-route-id="@item.BlogId">
-                                    Delete
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>@item.BlogId</td>
+                                <td>
+                                    <img src="~/img/@item.Image" width="100" />
+                                </td>
+                                <td>@item.Title</td>
+                                <td>@item.Date</td>
+                                <td>
+                                    @if (item.isApproved)
+                                    {
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.isHome)
+                                    {
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    }
+                                </td>
+                                <td>
+                                    @if (item.isSlider)
+                                    {
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    }
+                                </td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm" asp-controller="Blog" asp-action="Edit" asp-route-id="@item.BlogId">
+                                        Edit
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" asp-controller="Blog" asp-action="Delete" asp-route-id="@item.BlogId">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>

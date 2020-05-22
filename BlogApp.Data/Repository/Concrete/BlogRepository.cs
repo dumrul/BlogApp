@@ -58,8 +58,12 @@ namespace BlogApp.Data.Repository.Concrete
                 {
                     blog.Title = entity.Title;
                     blog.Description = entity.Description;
+                    blog.Body = entity.Body;
                     blog.CategoryId = entity.CategoryId;
                     blog.Image = entity.Image;
+                    blog.isHome = entity.isHome;
+                    blog.isApproved = entity.isApproved;
+                    blog.isSlider = entity.isSlider;
                 }
             }
 
